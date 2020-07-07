@@ -1,6 +1,6 @@
 def current_player(board=[" "," "," "," "," "," "," "," "," "])
   counter=turn_count(board)
-  if counter.remainder(2)==0
+  if counter%2==0
     return "X"
   else
     return "O"
@@ -14,6 +14,7 @@ def turn_count(board=[" "," "," "," "," "," "," "," "," "])
       counter+=1
     end
   end
+  return counter
 end
 
-puts current_player([" "," "," "," "," "," "," "," "," "])
+puts current_player(["X"," "," "," "," "," "," "," "," "])
